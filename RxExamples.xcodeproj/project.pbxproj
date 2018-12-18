@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0090AAAB21C89178009003C7 /* DriverSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0090AAAA21C89178009003C7 /* DriverSpec.swift */; };
 		1536B971A0890399D147B6CB /* Pods_RxExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EDD62BC014189CF7198CA8 /* Pods_RxExamples.framework */; };
 		25F06BE1D6D8CE90F913608F /* Pods_RxExamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CF735E81611DBBC1C10ADE /* Pods_RxExamplesTests.framework */; };
 		4918EB1A21C739E600EDB763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4918EB1921C739E600EDB763 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0090AAAA21C89178009003C7 /* DriverSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverSpec.swift; sourceTree = "<group>"; };
 		023D311A05FCF2BC542A741D /* Pods-RxExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxExamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxExamples/Pods-RxExamples.release.xcconfig"; sourceTree = "<group>"; };
 		2C2475B8188C519C310CEC25 /* Pods-RxExamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxExamplesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxExamplesTests/Pods-RxExamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		44884538B09804A964AED5FF /* Pods-RxExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxExamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxExamples/Pods-RxExamples.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				4918EB3C21C76A3D00EDB763 /* ObservableTests.swift */,
 				4918EB3E21C76A8200EDB763 /* SingleError.swift */,
 				4918EB4021C7A24600EDB763 /* TestableObservable.swift */,
+				0090AAAA21C89178009003C7 /* DriverSpec.swift */,
 			);
 			path = RxExamplesTests;
 			sourceTree = "<group>";
@@ -243,19 +246,23 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxExamplesTests/Pods-RxExamplesTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -267,15 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RxExamples-checkManifestLockResult.txt",
 			);
@@ -289,8 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxExamples/Pods-RxExamples-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
@@ -298,8 +299,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -315,15 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RxExamplesTests-checkManifestLockResult.txt",
 			);
@@ -349,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4918EB4121C7A24600EDB763 /* TestableObservable.swift in Sources */,
+				0090AAAB21C89178009003C7 /* DriverSpec.swift in Sources */,
 				4918EB3F21C76A8200EDB763 /* SingleError.swift in Sources */,
 				4918EB3D21C76A3D00EDB763 /* ObservableTests.swift in Sources */,
 				4918EB3A21C73A9000EDB763 /* SingleTests.swift in Sources */,
